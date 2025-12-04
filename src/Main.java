@@ -44,6 +44,8 @@ public class Main {
         for (Product p : pm.convertToStream(products).toList()) {
             System.out.println(p);
         }
-        
+        /*pm.convertToStream(products)
+                .forEach(p -> System.out.println(p));*/
+
     }
 }
