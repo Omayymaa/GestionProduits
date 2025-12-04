@@ -41,11 +41,8 @@ public class Main {
         }
 
         System.out.println(" Affichage via Stream : ");
-        for (Product p : pm.convertToStream(products).toList()) {
-            System.out.println(p);
-        }
-        /*pm.convertToStream(products)
-                .forEach(p -> System.out.println(p));*/
+        pm.convertToStream(products)
+                .forEach(p -> System.out.println(p));
 
     }
 }
