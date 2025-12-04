@@ -11,16 +11,14 @@ public class Main {
         products.add(new Product(3, "Tablet", 900));
 
         System.out.println(" Tous les produits : ");
-        for (Product p : products) {
-            System.out.println(p);
-        }
+        pm.displayProducts(products, p -> System.out.println(p));
 
         System.out.println(" Produits avec prix > 1000 : ");
-        for (Product p : products) {
-            if (p.getPrix() > 1000) {
-                System.out.println(p);
-            }
-        }
+        pm.displayProductsByFilter(
+                products,
+                p -> p.getPrix() > 1000,     // Predicate
+                p -> System.out.println(p)   // Consumer
+        );
 
         String names = pm.returnProductsNames(products, prod -> prod.getNom());
         System.out.println(" Noms des produits : " + names);
