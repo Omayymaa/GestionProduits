@@ -16,8 +16,8 @@ public class Main {
         System.out.println(" Produits avec prix > 1000 : ");
         pm.displayProductsByFilter(
                 products,
-                p -> p.getPrix() > 1000,     // Predicate
-                p -> System.out.println(p)   // Consumer
+                p -> p.getPrix() > 1000,     
+                p -> System.out.println(p)
         );
 
         String names = pm.returnProductsNames(products, prod -> prod.getNom());
